@@ -1,98 +1,17 @@
 # tallersistemasoperativoss
- Clase 1: 20 de Agosto de 2026
-
-Tema: Navegación en el Sistema de Archivos y Control de Versiones
-
-Estructura de Directorios en Linux: / (Raíz), /etc (Configuración), /home (Usuarios), /root (Superusuario), /var, /sys, /bin, /usr, /share (Sistema).
-
-Rutas:
-
-Absoluta: Inicia desde la raíz / (ej. cd /etc/apt/services).
-
-Relativa: Inicia desde el directorio actual (ej. cd ../user1).
-
-Comandos: cd (cambiar dir; cd ~, cd $HOME para ir a inicio), find (buscar archivos), printenv (variables de entorno), history (historial).
-
-Clase 2: 27 de Agosto de 2026
-
-Tema: Banderas de ls, Operadores Lógicos y Redirección
-
-Banderas ls: -a (ocultos), -lh (tamaño legible: KB, MB), -r (orden inverso).
-
-Operadores:
-
-Relacionales: >=, ==, >, <=, <, !=
-
-Lógicos: AND (&&), OR (||), NOT (!) (Ej: 5 > 3 AND 2 == 2 → Verdadero / 2 > 1 OR 1 > 2 → Verdadero).
-
-Clase 3: 29 de Agosto de 2026
-
-Tema: Introducción a la Interfaz de Usuario y Comandos Básicos
-
-Conceptos Clave: GUI (Interfaz Gráfica), Comando e Instrucción, Sintaxis (Estructura).
-
-Comandos Básicos: help (muestra comandos), touch (crea archivos vacíos, ej. touch uno.txt), ls (visualiza directorio).
-
-Nota: Linux es case-sensitive (distingue mayúsculas y minúsculas).
-
- Clase 4: 15 de Septiembre de 2026
-
-Tema: Permisos de Archivos en Linux
-
-Estructura Octal: 4 (Lectura/r), 2 (Escritura/w), 1 (Ejecución/x) en niveles Usuario / Grupo / Otros.
-
-Ejemplos chmod:
-
-chmod 400 file.txt (Solo propietario lee)
-
-chmod 444 file.txt (Todos leen)
-
-chmod 700 file.txt (Acceso total solo propietario)
-
-chmod +x file.txt (Agrega ejecución)
-
-chmod -wx file.txt (Quita escritura y ejecución)
-
-Propietario: chown (cambia propietario/grupo).
-
-Clase 5: 17 de Septiembre de 2026
-
-Tema: Caracteres Comodín (Wildcards) y Tuberías (|)
-
-Comodines: * (cero o infinitos caracteres, ej. *.txt, s*) y ? (exactamente un carácter).
-
-Comandos y Redirección: grep (filtra/busca texto), | Pipe (redirige salida a entrada, ej. ls -1 | grep *.txt), > (redirige salida a archivo, ej. echo "Hola" > file.txt), date (fecha), mkdir /tmp/taller (directorio temporal).
-
-Práctica de Laboratorio (Secuencia de Comandos)
-
-cd / — Ir a la raíz.
-
-cd $HOME — Ir al directorio personal.
-
-ls — Listar archivos.
-
-touch test.txt — Crear archivo.
-
-cp test.txt test2.txt — Copiar archivo.
-
-mv test2.txt test3.txt — Renombrar/mover archivo.
-
-rm test2.txt — Eliminar archivo.
-
-mkdir prueba — Crear carpeta.
-
-mv test3.txt prueba/ — Mover archivo a carpeta.
-
-cp -r /home/prueba /home/prueba2/ — Copiar carpeta recursivamente.
-
-rm -rf prueba — Eliminar carpeta de forma forzada.
-
-vi test3.txt / vi test4.txt — Editar archivos con Vi.
-
-cat test3.txt test4.txt > test5.txt — Concatenar archivos.
-
-clear — Limpiar pantalla.
-
-whoami — Mostrar usuario actual.
-
-history — Ver historial de comandos.
+📌 Bitácora de Clases📅 Clase 1: 20 de Agosto de 2026Tema: Navegación en el Sistema de Archivos y Control de VersionesEstructura de Directorios en Linux/: Raíz del sistema de archivos./etc: Archivos de configuración./home: Carpeta de usuarios./root: Cuenta del superusuario./var, /sys, /bin, /usr, /share: Directorios del sistema.Rutas Absolutas vs. Rutas RelativasRuta Absoluta: Inicia desde la raíz / (ejemplo: cd /etc/apt/services).Ruta Relativa: Inicia desde el directorio actual (ejemplo: cd ../user1).Comandos de Navegacióncd: Cambia de directorio (cd ~, cd $HOME para ir a inicio).find: Busca archivos en el sistema.printenv: Muestra variables de entorno.history: Muestra el historial de comandos.📅 Clase 2: 27 de Agosto de 2026Tema: Banderas de ls, Operadores Lógicos y RedirecciónBanderas del comando lsls -a: Muestra archivos ocultos.ls -lh: Muestra el tamaño en formato legible para humanos (KB, MB).ls -r: Enlista en orden inverso.Operadores Lógicos y RelacionalesRelacionales: >=, ==, >, <=, <, !=Lógicos: AND (&&), OR (||), NOT (!)Ejemplo: 5 > 3 AND 2 == 2 $\rightarrow$ Verdadero (T)Ejemplo: 2 > 1 OR 1 > 2 $\rightarrow$ Verdadero (T)📅 Clase 3: 29 de Agosto de 2026Tema: Introducción a la Interfaz de Usuario y Comandos BásicosConceptos ClaveGUI (Graphical User Interface): Interfaz gráfica de usuario.Comando: Conjunto de instrucciones para el sistema.Sintaxis: Estructura correcta de un comando.Comandos Básicoshelp: Muestra comandos disponibles.touch: Crea archivos vacíos (ejemplo: touch uno.txt).ls: Visualiza el contenido de un directorio.Nota: El sistema de archivos de Linux es case-sensitive (distingue entre mayúsculas y minúsculas).📅 Clase 4: 15 de Septiembre de 2026Tema: Permisos de Archivos en LinuxEstructura de Permisos (Octal)4: Lectura (r)2: Escritura (w)1: Ejecución (x)Niveles: Usuario / Grupo / OtrosEjemplos con chmod y chownchmod 400 file.txt: Solo el propietario puede leer.chmod 444 file.txt: Todos pueden leer.chmod 700 file.txt: Acceso total solo para el propietario.chmod +x file.txt: Agrega permisos de ejecución.chmod -wx file.txt: Quita permisos de escritura y ejecución.chown: Cambia el propietario/grupo de un archivo.📅 Clase 5: 17 de Septiembre de 2026Tema: Caracteres Comodín (Wildcards) y Tuberías (|)Comodines*: Representa cero o infinitos caracteres (ejemplo: *.txt, s*).?: Representa exactamente un carácter.Comandos y Redireccióngrep: Filtra y busca texto.| (Pipe): Redirige la salida de un comando a la entrada de otro (ejemplo: ls -1 | grep *.txt).>: Redirige la salida a un archivo (ejemplo: echo "Hola" > file.txt).date: Muestra/manipula la fecha del sistema.mkdir /tmp/taller: Crea un directorio temporal.📅 Práctica de Laboratorio (Secuencia de Comandos)cd /                        # Ir a la raíz
+cd $HOME                    # Ir al directorio personal
+ls                          # Listar archivos
+touch test.txt              # Crear archivo
+cp test.txt test2.txt       # Copiar archivo
+mv test2.txt test3.txt      # Renombrar/mover archivo
+rm test2.txt                # Eliminar archivo
+mkdir prueba                # Crear carpeta
+mv test3.txt prueba/        # Mover archivo a carpeta
+cp -r /home/prueba /home/prueba2/  # Copiar carpeta recursivamente
+rm -rf prueba               # Eliminar carpeta de forma forzada
+vi test3.txt / vi test4.txt # Editar archivos con Vi
+cat test3.txt test4.txt > test5.txt  # Concatenar archivos
+clear                       # Limpiar pantalla
+whoami                      # Mostrar usuario actual
+history                     # Ver historial de comandos
